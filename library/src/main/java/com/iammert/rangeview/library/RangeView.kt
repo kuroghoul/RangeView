@@ -308,13 +308,13 @@ class RangeView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         return motionEvent.x > rangeValueRectF.right - toggleRadius && motionEvent.x < rangeValueRectF.right + toggleRadius
     }
 
-    private fun getLeftValue(): Float {
+    public fun getLeftValue(): Float {
         val totalDiffInPx = totalValueRect.right - totalValueRect.left
         val firstValueInPx = rangeValueRectF.left - totalValueRect.left
         return maxValue * firstValueInPx / totalDiffInPx
     }
 
-    private fun getRightValue(): Float {
+    public fun getRightValue(): Float {
         val totalDiffInPx = totalValueRect.right - totalValueRect.left
         val secondValueInPx = rangeValueRectF.right - totalValueRect.left
         return maxValue * secondValueInPx / totalDiffInPx
